@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ms" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUDOFF | Tyre Cleaning Kit</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;0,900;1,400;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mudoff: {
+                            red: '#e60000',
+                            dark: '#0a0a0a',
+                            gray: '#1f1f1f'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+
+    <style>
+        .garang-clip {
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+        }
+        .hero-bg {
+            background: radial-gradient(circle at 70% 50%, #1f1f1f 0%, #0a0a0a 60%);
+        }
+        model-viewer {
+            width: 100%;
+            height: 100%;
+            --poster-color: transparent;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-mudoff-dark text-white font-sans overflow-x-hidden selection:bg-mudoff-red selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-mudoff-red/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0">
+                    <img class="h-12 w-auto object-contain" src="logo.jpg" alt="MUDOFF Logo" onerror="this.src='https://placehold.co/200x80/1f1f1f/e60000?text=MUDOFF&font=Montserrat'">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#utama" class="text-white hover:text-mudoff-red px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-300">Utama</a>
+                        <a href="#inovasi" class="text-gray-300 hover:text-mudoff-red px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-300">Inovasi</a>
+                        <a href="#institusi" class="text-gray-300 hover:text-mudoff-red px-3 py-2 rounded-md text-sm font-bold uppercase tracking-wider transition-colors duration-300">Institusi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="utama" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <div class="w-full md:w-1/2 space-y-8 z-10">
+                    <div class="inline-block border border-mudoff-red text-mudoff-red px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-4 shadow-[0_0_10px_rgba(230,0,0,0.3)]">
+                        Juara Keseluruhan Inovasi
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-black italic uppercase leading-none tracking-tight">
+                        Bersihkan Tayar.<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-mudoff-red to-red-600">
+                            Kuasai Laluan.
+                        </span>
+                    </h1>
+                    <p class="text-gray-400 text-lg md:text-xl font-medium max-w-lg">
+                        Sistem pembersihan tayar MTB berkuasa kinetik dan semburan air. Direka untuk prestasi maksimum dan kecekapan tanpa kompromi.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#3d-view" class="garang-clip inline-block bg-mudoff-red hover:bg-red-700 text-white font-black italic uppercase px-10 py-4 text-lg transition-transform hover:scale-105 duration-300 shadow-[0_0_20px_rgba(230,0,0,0.4)]">
+                            Lihat Model 3D
+                        </a>
+                    </div>
+                </div>
+
+                <div id="3d-view" class="w-full md:w-1/2 h-[500px] md:h-[600px] relative bg-mudoff-gray/30 rounded-2xl border border-white/5 shadow-2xl overflow-hidden">
+                    <model-viewer 
+                        src="model.glb" 
+                        alt="3D Model MUDOFF" 
+                        auto-rotate 
+                        camera-controls 
+                        shadow-intensity="1.5" 
+                        exposure="1.2"
+                        interaction-prompt="hover"
+                        class="w-full h-full">
+                        
+                        <div slot="poster" class="absolute inset-0 flex items-center justify-center bg-mudoff-gray/80 backdrop-blur-sm">
+                            <div class="text-center">
+                                <div class="w-10 h-10 border-4 border-mudoff-red border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                                <p class="text-gray-400 font-bold text-xs uppercase tracking-widest">Memuatkan 3D...</p>
+                            </div>
+                        </div>
+                    </model-viewer>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="inovasi" class="py-20 bg-black border-t border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-black italic text-white uppercase">Kejuruteraan <span class="text-mudoff-red">Terunggul</span></h2>
+                <p class="mt-4 text-gray-400 max-w-2xl mx-auto">Direka dengan teliti dari setiap sudut untuk memberikan pembersihan yang cepat dan efektif.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-mudoff-gray p-8 border-b-4 border-mudoff-red hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-black text-mudoff-red uppercase italic mb-3">01. Tenaga Kinetik</h3>
+                    <p class="text-gray-400 text-sm">Menggunakan sistem penggelek (roller) untuk memutarkan tayar dengan lancar semasa dicuci.</p>
+                </div>
+                <div class="bg-mudoff-gray p-8 border-b-4 border-mudoff-red hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-black text-mudoff-red uppercase italic mb-3">02. Pancutan Air</h3>
+                    <p class="text-gray-400 text-sm">Sudut semburan (water jet) yang difokuskan pada bunga tayar untuk menanggalkan lumpur degil.</p>
+                </div>
+                <div class="bg-mudoff-gray p-8 border-b-4 border-mudoff-red hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-xl font-black text-mudoff-red uppercase italic mb-3">03. Pelindung Akrilik</h3>
+                    <p class="text-gray-400 text-sm">Casing pelindung bertindak sebagai penghadang percikan kotoran, memastikan pengguna kekal bersih.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="institusi" class="bg-[#050505] pt-16 pb-8 border-t border-mudoff-red/20">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col items-center">
+            
+            <div class="text-center mb-8">
+                <p class="text-gray-500 text-xs font-bold tracking-[0.3em] uppercase mb-6">Penghargaan Institusi</p>
+                
+                <div class="bg-white p-5 rounded-xl inline-block shadow-[0_0_20px_rgba(255,255,255,0.1)] mb-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Logo_Politeknik_Malaysia.png/600px-Logo_Politeknik_Malaysia.png" alt="Politeknik Muadzam Shah" class="h-16 object-contain">
+                </div>
+                
+                <h4 class="text-white font-black text-2xl uppercase tracking-tight">Politeknik Muadzam Shah</h4>
+                <p class="text-mudoff-red text-sm font-bold uppercase tracking-widest mt-2">Jabatan Kejuruteraan Mekanikal</p>
+            </div>
+
+            <div class="w-full border-t border-gray-800 mt-8 pt-8 text-center flex flex-col md:flex-row justify-between items-center text-xs text-gray-600 uppercase tracking-widest">
+                <p>&copy; 2026 MUDOFF Project.</p>
+                <p class="mt-4 md:mt-0 italic font-bold">Direka oleh Pasukan MUDOFF</p>
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html>
